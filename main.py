@@ -29,17 +29,17 @@ def iss_location():
         return True
 
 
-my_mail = 'shreekantpukale0@gmail.com'
-my_password = 'pllssljmsxnimjri'
+my_mail = 'YOURMAIL@gmail.com'
+my_password = 'YOURPASSWORD'
 if is_night():
     if iss_location():
         connection = smtplib.SMTP('smtp.gmail.com')
         connection.starttls()
         connection.login(user=my_mail, password=my_password)
         connection.sendmail(from_addr=my_mail, to_addrs=my_mail, msg='SUBJECT:HEY ISS IS ON YOUR HEAD\n\n'
-                                                                     'hey shree look there is worlds most'
+                                                                     'hey YOURNAME look there is worlds most'
                                                                      ' expensive thing on your head now '
-                                                                     'you are richer than the queen')
+                                                                     'you are richer than the queen'
         connection.close()
         print("mail sent")
 else:
